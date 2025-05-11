@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Anywear</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anywear</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>To Anywear</h1>
-    <p>Your personalised packing assistant to any destination.</p>
+  <header>
+    <h1>Anywear</h1>
+    <p>Helping you choose what to wear for any destination</p>
+  </header>
+
+  <main>
+    <div class="search-container">
+      <div class="search-header">
+        <button class="trip-type active">Multi-city</button>
+        <div class="passenger-info">1 · Economy</div>
+      </div>
+
+      <div class="destinations" id="destinations">
+        <div class="destination-row">
+          <input type="text" class="city-input" placeholder="Enter a city" />
+          <input type="date" class="date-input" />
+          <input type="date" class="date-input" />
+          <button class="remove-btn" onclick="removeRow(this)">✕</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="add-btn" onclick="addDestination()">+ Add destination</button>
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
